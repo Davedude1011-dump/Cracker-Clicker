@@ -221,3 +221,85 @@ body {
   top: 50%;
   transform: translate(-50%, -50%)
 }
+
+@media screen and (orientation:portrait) {
+  .ham {
+  position: absolute;
+  width: 300px;
+  top: 32%
+}
+.pepperoni {
+  position: absolute;
+  width: 300px;
+  top: 25%;
+  left: 35%
+}
+.cheese {
+  position: absolute;
+  width: 300px;
+  top: 60%;
+  left: 10%
+}
+.sun {
+  position: absolute;
+  width: 500px;
+  top: 22%;
+  left: 60%
+}
+.gold {
+  position: absolute;
+  width: 300px;
+  top: 70%;
+  left: 30%
+}
+}
+@media screen and (orientation:landscape) {
+  .ham {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 5%
+  }
+  .pepperoni {
+    position: absolute;
+    width: 300px;
+    top: 35%;
+    left: 20%
+  }
+  .cheese {
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 5%
+  }
+  .sun {
+    position: absolute;
+    width: 500px;
+    top: 25%;
+    left: 65%
+  }
+  .gold {
+    position: absolute;
+    width: 300px;
+    top: 65%;
+    left: 30%
+  }
+}
+
+.blackHole {
+  position: absolute;
+  width: 300px;
+  top: 65%;
+  left: 60%
+}
+
+.radiation {
+  position: absolute;
+  width: 300px;
+  top: 35%;
+  left: 60%
+}
+
+.noDis {
+  display: none
+}

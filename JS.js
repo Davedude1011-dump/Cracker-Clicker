@@ -3,6 +3,8 @@ var moneyPerClick = 1
 
 var clickBuffCounter = 0
 var buffClicks = 0
+var buffClicksMax = 15
+var buffClicksMultiplyer = 5
 var isBuffOn = false
 
 var upgrade1Amount = 0
@@ -22,7 +24,7 @@ var upgrade6Cost = 100000
 var upgrade7Cost = 10000000
 
 function moneyClick() {
-    
+    money += moneyPerClick
     document.getElementById("numberCounter").innerHTML = money
     checkUpgradeCosts()
     updateMoneyCounter()
@@ -41,13 +43,13 @@ function moneyClick() {
         document.getElementById("tribute").innerHTML = "Sam do you like galleta"
     }
     else {
-        document.getElementById("tribute").innerHTML = "BETA 3.4"
+        document.getElementById("tribute").innerHTML = "BETA 3.6"
     }
 
     if (isBuffOn === true) {
-        if (buffClicks <= 15) {
-           money += moneyPerClick*5
-           document.getElementById("tribute").innerHTML = "BONUS: " + (15 - buffClicks)
+        if (buffClicks <= buffClicksMax) {
+           money += (moneyPerClick*buffClicksMultiplyer)-moneyPerClick
+           document.getElementById("tribute").innerHTML = "BONUS: " + (buffClicksMax - buffClicks)
         }
         else {
             isBuffOn = false
@@ -55,9 +57,6 @@ function moneyClick() {
             buffClicks = 0
         }
         buffClicks += 1
-    }
-    else {
-        money += moneyPerClick
     }
 }
 
@@ -109,6 +108,9 @@ function upgradeCheeseBuy() {
         moneyPerClick += 1
         upgrade1Amount += 1
         document.getElementById("upgradeTableText1Amount").innerHTML = upgrade1Amount
+        upgrade1Cost += (moneyPerClick*5)
+        document.getElementById("upgrade1price").innerHTML = upgrade1Cost
+        document.getElementById("cheese").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -120,6 +122,9 @@ function upgradeHamBuy() {
         moneyPerClick += 10
         upgrade2Amount += 1
         document.getElementById("upgradeTableText2Amount").innerHTML = upgrade2Amount
+        upgrade2Cost += (moneyPerClick*5)
+        document.getElementById("upgrade2price").innerHTML = upgrade2Cost
+        document.getElementById("ham").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -131,6 +136,9 @@ function upgradePepperoniBuy() {
         moneyPerClick += 50
         upgrade3Amount += 1
         document.getElementById("upgradeTableText3Amount").innerHTML = upgrade3Amount
+        upgrade3Cost += (moneyPerClick*5)
+        document.getElementById("upgrade3price").innerHTML = upgrade3Cost
+        document.getElementById("pepperoni").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -142,6 +150,9 @@ function upgradeRadiationBuy() {
         moneyPerClick += 200
         upgrade4Amount += 1
         document.getElementById("upgradeTableText4Amount").innerHTML = upgrade4Amount
+        upgrade4Cost += (moneyPerClick*5)
+        document.getElementById("upgrade4price").innerHTML = upgrade4Cost
+        document.getElementById("radiation").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -153,6 +164,9 @@ function upgradeStarBuy() {
         moneyPerClick += 1000
         upgrade5Amount += 1
         document.getElementById("upgradeTableText5Amount").innerHTML = upgrade5Amount
+        upgrade5Cost += (moneyPerClick*5)
+        document.getElementById("upgrade5price").innerHTML = upgrade5Cost
+        document.getElementById("star").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -164,6 +178,9 @@ function upgradeBlackholeBuy() {
         moneyPerClick += 10000
         upgrade6Amount += 1
         document.getElementById("upgradeTableText6Amount").innerHTML = upgrade6Amount
+        upgrade6Cost += (moneyPerClick*20)
+        document.getElementById("upgrade6price").innerHTML = upgrade6Cost
+        document.getElementById("blackHole").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -175,6 +192,9 @@ function upgradeGOLDBuy() {
         moneyPerClick += 1000000
         upgrade7Amount += 1
         document.getElementById("upgradeTableText7Amount").innerHTML = upgrade7Amount
+        upgrade7Cost += (moneyPerClick*30)
+        document.getElementById("upgrade7price").innerHTML = upgrade7Cost
+        document.getElementById("gold").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
