@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="Writen by Thomas :)">
+    <head>
+        <title class="PATCH NOTES: fixed the click buff not working the second time glitch :)">
+            Beta 3.4
+        </title>
+        <link rel="stylesheet" href="CSS.css">
+        <script src="JS.js"></script>
+        <meta name="vieport" content="width-device-width, initial-scale-1">
+        <meta name="viewport" content="user-scalable=no" />
+    </head>
+    <body>
+        <!-- Project: -->
+
+        <!-- ideas
+
+Animation
+game
+
+
+
+
+   # # # # # # # # # #
+   #                 #
+   #                 #
+   #                 #
+   #                 #
+   #                 #
+   #                 #
+   #                 #
+   #                 #
+   # # # # # # # # # #
+
+-->
+        
+
+        <!--Start of HTML code: -->
+        <div class="tributeTextDiv">
+            <b id="tribute" class="tributeText">BETA 3.4</b>
+        </div>
+        
+        <div class="moneyAndMPCBackground" id="moneyAndMPCBackground">
+            
+            <a class="moneyScore" align="center">
+                <h1 class="bigFont">
+                    <b id="numberCounter">
+                        0
+                    </b>
+                    <b class="bigFont">
+                        Crackers
+                    </b>
+                </h1>
+                <h5 class="smallFont">
+                    <b id="MPCCounter">
+                        1</b>
+                    <b class="smallFont">
+                        crackers per click
+                    </b>
+                </h5>
+            </a>
+        </div>
+        
+        <div class="cracker"><img onclick="moneyClick()" src="images/cracker.png" class="crackerImg rotate"></div>
+        <div id="upgradeCracker" class="upgradeCracker" onclick="upgradeCrackerClick(),  phoneCheck()"><img src="images\upgradesCracker.png"></div>
+        <div class="upgradeCrackerPanel noVis" id="upgradeCrackerPanel" >
+            <div onclick="upgradeCheeseBuy()" id="upgradeTableText1" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade1price" class="upgrade1price noBlur">30</b> <br> · Cheese ·<b>  · <a id="upgradeTableText1Amount">0</a> ·</b><br> <i>(+1 "CHEESY")</i></a></center></div>
+            <br>
+            <div onclick="upgradeHamBuy()" id="upgradeTableText2" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade2price" class="upgrade2price noBlur">200</b> <br> · Ham ·<b>  · <a id="upgradeTableText2Amount">0</a> ·</b><br> <i>(+10 "Oooh ham")</i></a></center></div>
+            <br>
+            <div onclick="upgradePepperoniBuy()" id="upgradeTableText3" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade3price" class="upgrade3price noBlur">5000</b> <br> · Pepperoni ·<b>  · <a id="upgradeTableText3Amount">0</a> ·</b><br> <i>(+50 "Now where talking")</i></a></center></div>
+            <br>
+            <div onclick="upgradeRadiationBuy()" id="upgradeTableText4" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade4price" class="upgrade4price noBlur">20000</b> <br> · Radiation ·<b>  · <a id="upgradeTableText4Amount">0</a> ·</b><br> <i>(+200 "WAIT WHAT")</i></a></center></div>
+            <br>
+            <div onclick="upgradeStarBuy()" id="upgradeTableText5" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade5price" class="upgrade5price noBlur">50000</b> <br> · Star ·<b>  · <a id="upgradeTableText5Amount">0</a> ·</b><br> <i>(+1,000 "Extra krispy")</i></a></center></div>
+            <br>
+            <div onclick="upgradeBlackholeBuy()" id="upgradeTableText6" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade6price" class="upgrade6price noBlur">100000</b> <br> · BlackHole ·<b>  · <a id="upgradeTableText6Amount">0</a> ·</b><br> <i>(+10,000 "You spin me right round")</i></a></center></div>
+            <br>
+            <div onclick="upgradeGOLDBuy()" id="upgradeTableText7" class="upgradeTable blur"><center><a id="upgradeTableText" class="upgradeTableText"><b class="noBlur">$</b><b id="upgrade7price" class="upgrade7price noBlur">10000000</b> <br> · GOLD ·<b>  · <a id="upgradeTableText7Amount">0</a> ·</b><br> <i>(+1,000,000 "Midas?")</i></a></center></div>
+        </div>
+        <div id="isUpgradeCrackerOutYet" class="noVis">no</div>
+        <div id="isUpgradeTableBaughtYet" class="noVis">no</div>
+        <div id="upgradeTableObject" class="upgradeTableObject noVis"></div>
+        <div id="isPhone" class="noVis"></div>
+    </body>
+</html>
