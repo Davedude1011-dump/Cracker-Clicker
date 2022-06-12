@@ -48,7 +48,7 @@ function moneyClick() {
         document.getElementById("tribute").innerHTML = "Sam do you like galleta"
     }
     else {
-        document.getElementById("tribute").innerHTML = "BETA 3.6"
+        document.getElementById("tribute").innerHTML = "BETA 3.8"
     }
 
     if (isBuffOn === true) {
