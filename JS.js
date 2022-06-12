@@ -7,6 +7,9 @@ var buffClicksMax = 15
 var buffClicksMultiplyer = 5
 var isBuffOn = false
 
+var topIcons = true
+var forceTopIcons = false
+
 var upgrade1Amount = 0
 var upgrade2Amount = 0
 var upgrade3Amount = 0
@@ -29,6 +32,8 @@ function moneyClick() {
     checkUpgradeCosts()
     updateMoneyCounter()
     clickBuffCounter += 1
+
+
     
     topBarFillUp()
     
@@ -110,7 +115,6 @@ function upgradeCheeseBuy() {
         document.getElementById("upgradeTableText1Amount").innerHTML = upgrade1Amount
         upgrade1Cost += (moneyPerClick*5)
         document.getElementById("upgrade1price").innerHTML = upgrade1Cost
-        document.getElementById("cheese").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -124,7 +128,6 @@ function upgradeHamBuy() {
         document.getElementById("upgradeTableText2Amount").innerHTML = upgrade2Amount
         upgrade2Cost += (moneyPerClick*5)
         document.getElementById("upgrade2price").innerHTML = upgrade2Cost
-        document.getElementById("ham").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -138,7 +141,6 @@ function upgradePepperoniBuy() {
         document.getElementById("upgradeTableText3Amount").innerHTML = upgrade3Amount
         upgrade3Cost += (moneyPerClick*5)
         document.getElementById("upgrade3price").innerHTML = upgrade3Cost
-        document.getElementById("pepperoni").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -152,7 +154,6 @@ function upgradeRadiationBuy() {
         document.getElementById("upgradeTableText4Amount").innerHTML = upgrade4Amount
         upgrade4Cost += (moneyPerClick*5)
         document.getElementById("upgrade4price").innerHTML = upgrade4Cost
-        document.getElementById("radiation").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -166,7 +167,6 @@ function upgradeStarBuy() {
         document.getElementById("upgradeTableText5Amount").innerHTML = upgrade5Amount
         upgrade5Cost += (moneyPerClick*5)
         document.getElementById("upgrade5price").innerHTML = upgrade5Cost
-        document.getElementById("star").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -180,7 +180,6 @@ function upgradeBlackholeBuy() {
         document.getElementById("upgradeTableText6Amount").innerHTML = upgrade6Amount
         upgrade6Cost += (moneyPerClick*20)
         document.getElementById("upgrade6price").innerHTML = upgrade6Cost
-        document.getElementById("blackHole").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -194,7 +193,6 @@ function upgradeGOLDBuy() {
         document.getElementById("upgradeTableText7Amount").innerHTML = upgrade7Amount
         upgrade7Cost += (moneyPerClick*30)
         document.getElementById("upgrade7price").innerHTML = upgrade7Cost
-        document.getElementById("gold").style.display = "block"
         updateMoneyCounter()
     }
     checkUpgradeCosts()
@@ -362,5 +360,42 @@ function topBarFillUp() {
                 }
             }
         }
+    }
+}
+
+function toggleTopIcons() {
+    if (topIcons === false) {
+        document.getElementById("cheese").style.visibility = "hidden"
+        document.getElementById("ham").style.visibility = "hidden"
+        document.getElementById("pepperoni").style.visibility = "hidden"
+        document.getElementById("radiation").style.visibility = "hidden"
+        document.getElementById("sun").style.visibility = "hidden"
+        document.getElementById("blackHole").style.visibility = "hidden"
+        document.getElementById("gold").style.visibility = "hidden"
+        topIcons = true
+    }
+    else {
+        if (upgrade1Amount > 0) {
+            document.getElementById("cheese").style.visibility = "visible"
+        }
+        if (upgrade2Amount > 0) {
+            document.getElementById("ham").style.visibility = "visible"
+        }
+        if (upgrade3Amount > 0) {
+            document.getElementById("pepperoni").style.visibility = "visible"
+        }
+        if (upgrade4Amount > 0) {
+            document.getElementById("radiation").style.visibility = "visible"
+        }
+        if (upgrade5Amount > 0) {
+            document.getElementById("sun").style.visibility = "visible"
+        }
+        if (upgrade6Amount > 0) {
+            document.getElementById("blackHole").style.visibility = "visible"
+        }
+        if (upgrade7Amount > 0) {
+            document.getElementById("gold").style.visibility = "visible"
+        }
+        topIcons = false
     }
 }

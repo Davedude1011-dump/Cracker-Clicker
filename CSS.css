@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     touch-action: manipulation;
+    font-family: Verdana;
 }
 
 body {
@@ -190,7 +193,7 @@ body {
   .moneyAndMPCBackground {
     position: absolute;
     width: 100%;
-    height: 5vh;
+    height: 6vh;
     top: 9%
   }
 }
@@ -198,7 +201,7 @@ body {
   .moneyAndMPCBackground {
     position: absolute;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
     top: 10%;
   }
 }
@@ -222,82 +225,50 @@ body {
   transform: translate(-50%, -50%)
 }
 
-@media screen and (orientation:portrait) {
+
+@media screen and (orientation: landscape) {
+    .cheese {
+    position: relative;
+    height: 60%;
+    top: 20%;
+  }
   .ham {
-  position: absolute;
-  width: 300px;
-  top: 32%
-}
-.pepperoni {
-  position: absolute;
-  width: 300px;
-  top: 25%;
-  left: 35%
-}
-.cheese {
-  position: absolute;
-  width: 300px;
-  top: 60%;
-  left: 10%
-}
-.sun {
-  position: absolute;
-  width: 500px;
-  top: 22%;
-  left: 60%
-}
-.gold {
-  position: absolute;
-  width: 300px;
-  top: 70%;
-  left: 30%
-}
-}
-@media screen and (orientation:landscape) {
-  .ham {
-    position: absolute;
-    width: 300px;
-    top: 50%;
-    left: 5%
+    position: relative;
+    height: 60%;
+    top: 20%;
   }
   .pepperoni {
-    position: absolute;
-    width: 300px;
-    top: 35%;
-    left: 20%
-  }
-  .cheese {
-    position: absolute;
-    width: 300px;
+    position: relative;
+    height: 60%;
     top: 20%;
-    left: 5%
+    left: 0%
+  }
+
+  .radiation {
+    position: relative;
+    height: 60%;
+    top: 20%;
   }
   .sun {
-    position: absolute;
-    width: 500px;
-    top: 25%;
-    left: 65%
+    position: relative;
+    height: 60%;
+    top: 20%;
+  }
+  .blackHole {
+    position: relative;
+    height: 60%;
+    top: 20%;
   }
   .gold {
-    position: absolute;
-    width: 300px;
-    top: 65%;
-    left: 30%
+    position: relative;
+    height: 60%;
+    top: 20%;
   }
 }
-
-.blackHole {
-  position: absolute;
-  width: 300px;
-  top: 65%;
-  left: 60%
-}
-
-.radiation {
-  position: absolute;
-  width: 300px;
-  top: 35%;
-  left: 60%
+@media screen and (orientation: portrait) {
+  #toggleIconButton {
+    display: none
+  }
 }
 
 .noDis {
