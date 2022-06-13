@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BACKGROUND: */
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* LEFT BOX */
+
+.leftBoxOuter {
+    position: relative;
+    height: 95vh;
+    width: 25%;
+    float: left;
+    margin: 1%;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 3vh;
+}
+
+/* MIDDLE BOX */
+
+.middleBoxOuter {
+    position: relative;
+    height: 95vh;
+    width: 44%;
+    float: left;
+    margin: 1%;
+    background-color: transparent;
+}
+
+.middleTopBar {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%);
+    background-color: transparent;
+    border: 3px black solid;
+    border-left: none;
+    border-right: none
+}
+
+.middleMiddleBox {
+    position: relative;
+    height: 65%;
+    background-color: transparent;
+    top: 2%
+}
+
+/* CRACKER */
+
+.cracker {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    top: 20%;
+    cursor: pointer;
+}
+
+.middleBottomBox {
+    position: relative;
+    height: 20%;
+    margin: 1%;
+    background-color: rgba(45, 45, 45, 0.7);
+    top: 2%;
+    border-radius: 1vh
+}
+
+/* Cracker Counter Text */
+
+#crackerCounter, #crackerCounterText{
+    position: relative;
+    font-size: 50px;
+    font-family: Kdam Thmor Pro;
+    top: 10px;
+    color: rgb(237, 129, 61);
+    letter-spacing: 2px;
+}
+
+
+/* RIGHT BOX */
+
+.rightBoxOuter {
+    position: relative;
+    height: 95vh;
+    width: 25%;
+    float: right;
+    margin: 1%;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 3vh;
+}
+
+
+/* add-on classes */
+
+.rotate {
+    animation: rotation 60s infinite linear;
+  }
+  
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
