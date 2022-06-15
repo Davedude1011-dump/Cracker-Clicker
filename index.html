@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html class="Made by Thomas :] thanks to sam for help with game aspects :}">
     <head>
         <!-- Title: -->
-        <title>BETA 3.9</title>
+        <title>ALPHA 1.0</title>
         
         <!-- LINKING -->
         <link rel="stylesheet" href="CSS.css">
@@ -13,7 +13,70 @@
 
         <!-- Left Box -->
         <div class="leftBoxOuter">
-            
+            <div id="upgradesBoxOuter">
+                <div class="upgradesHeader">
+                    <center>
+                        UPGRADES
+                    </center>
+                </div>
+                <div id="upgradesOuterShell">
+                    <!-- Make a Table of upgrade buttons here :) -->
+                    <br>
+                    <table>
+                        <tr>
+                            <div id="upgradeButton" class="clickable" onclick='upgradeButtonOneOnclick()'>
+                                <img src="images\blackCheese.png" id="upgradeButtonOneImg">
+                                <div class="upgradeButtonQuestionMark">
+                                    <center>
+                                        <b id="UpgradeButtonOneName">???</b>
+                                    </center>
+                                </div>
+                                <div id="upgradeButtonPriceOne">
+                                    <center>
+                                        <b>$<a id="upgradeButtonOnePrice">30</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                        <br>
+                        <tr>
+                            <div id="upgradeButton"></div>
+                          </tr>
+                      </table>
+                </div>
+            </div>
         </div>
 
         <!-- Middle Box -->
@@ -27,13 +90,55 @@
                 <img onclick="crackerClick()" class="cracker rotate" src="images\cracker.png">
             </div>
             <div class="middleBottomBox">
+                <div class="middleBottomTopLeft" onclick='upgradeToggle()'>
+                    <center>
+                        <b class="upgradeButton">
+                            UPGRADES
+                        </b>
+                    </center>
+                </div>
+                <div class="middleBottomTopRight" onclick='infoToggle()'>
+                    <center>
+                        <b class="upgradeButton">
+                            INFO
+                        </b>
+                    </center>
+                </div>
+                <div class="middleBottomBottomLeft">
 
+                </div>
+                <div class="middleBottomBottomRight">
+
+                </div>
             </div>
         </div>
 
         <!-- Right Box -->
         <div class="rightBoxOuter">
-            
+            <div id="infoBoxOuter">
+                <div class="upgradesHeader">
+                    <center>
+                        INFO
+                    </center>
+                </div>
+                    <div id="infoOuterShell">
+                    <br>
+                        <div class="infoPanel">
+                            <p class="infoPanelText">
+                                Welcome to <b>&copy;Cracker Clicker</b>, a side project i have been working on. <br><br>
+                                The aim of the game is to click the big cracker to collect crackers wich you can see
+                                at the top. You can spend those crackers on upgrades wich allow you to get more crackers
+                                for more upgrades ect...<br><br>
+                                This game was made purly with HTML, CSS and JS on Visual Studio Code.<br><br>
+                                Creator: Thomas Smallwood<br>
+                                Helper: Sam Bray<br><br>
+                                Visit my <a href="https://github.com/davedude1011/Cracker-Clicker">GITHUB</a><br><br>
+                                You can find my other work <a href="https://davedude1011.github.io/My-Collection/">Here</a>
+                            </p>
+                        </div>
+                    <div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
