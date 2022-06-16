@@ -23,7 +23,7 @@ body {
     width: 25%;
     float: left;
     margin: 1%;
-    background-color: rgba(128, 128, 128, 0.6);
+    background-color: transparent;
     border-radius: 20px;
 }
 
@@ -105,6 +105,70 @@ body {
     }
 }
 
+/* SKINS TAB */
+
+#skinsBoxOuter {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: left;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 20px;
+    overflow: auto;
+    text-align:justify;
+    display: none
+}
+
+.skinsHeader {
+    position: relative;
+    font-size: 30px;
+    font-family: Kdam Thmor Pro;
+    top: 10px;
+    color: rgb(0, 208, 255);
+    letter-spacing: 2px;
+    border: 3px solid blue;
+    border-image: linear-gradient(90deg,transparent 0% 10%, rgb(0, 0, 0) 50% 70%, transparent 90% 100%) 1;
+    border-left: none;
+    border-right: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto
+
+}
+
+#skinsOuterShell {
+    position: relative;
+    height: 90%;
+    background-color: transparent;
+    margin: 5%;
+}
+
+#skinsButton {
+    position: relative;
+    width: 75%;
+    height: 10%;
+    background-color: white;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.skinsButtonQuestionMark {
+    position: relative;
+    font-size: 35px;
+    font-family: Fascinate
+}
+.skinsButtonQuestionMarkLonger {
+    position: relative;
+    font-size: 22px;
+    font-family: Fascinate
+}
+
+#skinsButtonPriceOne {
+    position: relative;
+    color: rgb(235, 169, 14);
+    font-size: 30px;
+}
 
 /* MIDDLE BOX */
 
@@ -191,12 +255,12 @@ body {
 .middleBottomBottomLeft {
     top: auto;
     bottom: 0;
-    left: auto;
-    right: 0;
 }
 .middleBottomBottomRight {
     top: auto;
     bottom: 0;
+    left: auto;
+    right: 0;
 }
 
 @media screen and (orientation: landscape) {
@@ -227,7 +291,7 @@ body {
     width: 25%;
     float: right;
     margin: 1%;
-    background-color: rgba(128, 128, 128, 0.6);
+    background-color: transparent;
     border-radius: 20px;
 }
 
@@ -303,4 +367,15 @@ body {
 
 .clickable {
     cursor: pointer;
+}
+
+.absolute {
+    position: relative
+}
+
+.cheese {
+    top: -35%;
+    height: 40%;
+    width: 40%;
+    display: none
 }

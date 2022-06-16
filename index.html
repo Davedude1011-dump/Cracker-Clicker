@@ -77,6 +77,88 @@
                       </table>
                 </div>
             </div>
+            <div id="skinsBoxOuter">
+                <div class="skinsHeader">
+                    <center>
+                        SKINS
+                    </center>
+                </div>
+                <div id="skinsOuterShell">
+                    <!-- Make a Table of upgrade buttons here :) -->
+                    <br>
+                    <table>
+                        <tr>
+                            <div id="skinsButton" class="clickable" onclick='skinsButtonOneOnclick()'>
+                                <div class="skinsButtonQuestionMark">
+                                    <center>
+                                        <b id="skinsOne">Melted Cheese</b>
+                                    </center>
+                                </div>
+                                <div id="skinsButtonPriceOne">
+                                    <center>
+                                        <b>$<a id="skinsButtonOnePrice">100,000,000</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="skinsButton">
+                                <div class="skinsButtonQuestionMark">
+                                    <center>
+                                        <b id="skinsTwo">Jam</b>
+                                    </center>
+                                </div>
+                                <div id="skinsButtonPriceOne">
+                                    <center>
+                                        <b>$<a id="skinsButtonOnePrice">5,000,000,000,000</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="skinsButton">
+                                <div class="skinsButtonQuestionMark">
+                                    <center>
+                                        <b id="skinsThree">Bacon</b>
+                                    </center>
+                                </div>
+                                <div id="skinsButtonPriceOne">
+                                    <center>
+                                        <b>$<a id="skinsButtonOnePrice">1e+20</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="skinsButton">
+                                <div class="skinsButtonQuestionMark">
+                                    <center>
+                                        <b id="skinsFour">Golden Cracker</b>
+                                    </center>
+                                </div>
+                                <div id="skinsButtonPriceOne">
+                                    <center>
+                                        <b>$<a id="skinsButtonOnePrice">1e+100</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div id="skinsButton">
+                                <div class="skinsButtonQuestionMarkLonger">
+                                    <center>
+                                        <b>Golden Cracker works with the other skins :)</b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                      </table>
+                </div>
+            </div>
         </div>
 
         <!-- Middle Box -->
@@ -88,6 +170,7 @@
             </div>
             <div class="middleMiddleBox">
                 <img onclick="crackerClick()" class="cracker rotate" src="images\cracker.png">
+                <img onclick="crackerClick()" id="meltedCheese" class="cracker rotate absolute cheese" src="images\cheeseSkin.png">
             </div>
             <div class="middleBottomBox">
                 <div class="middleBottomTopLeft" onclick='upgradeToggle()'>
@@ -104,11 +187,19 @@
                         </b>
                     </center>
                 </div>
-                <div class="middleBottomBottomLeft">
-
+                <div class="middleBottomBottomLeft" onclick='skinsToggle()'>
+                    <center>
+                        <b class="upgradeButton">
+                            SKINS
+                        </b>
+                    </center>
                 </div>
                 <div class="middleBottomBottomRight">
-
+                    <center>
+                        <b class="upgradeButton">
+                            STATS
+                        </b>
+                    </center>
                 </div>
             </div>
         </div>
