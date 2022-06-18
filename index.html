@@ -256,6 +256,21 @@
                         </tr>
                         <br>
                         <tr>
+                            <div id="skinsButton" class="clickable" onclick='skinsButtonFiveOnclick()'>
+                                <div class="skinsButtonQuestionMark">
+                                    <center>
+                                        <b id="skinsFive">Puuur Fection</b>
+                                    </center>
+                                </div>
+                                <div id="skinsButtonPriceFive">
+                                    <center>
+                                        <b><a id="skinsButtonFivePrice">🔒</a></b>
+                                    </center>
+                                </div>
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
                             <div id="skinsButton">
                                 <div class="skinsButtonQuestionMarkLonger">
                                     <center>
@@ -277,7 +292,7 @@
                 </center>
             </div>
             <div class="middleMiddleBox">
-                <img onclick="crackerClick()" class="cracker rotate" src="images\cracker.png">
+                <img onclick="crackerClick()" id="cracker" class="cracker rotate" src="images\cracker.png">
                 <img onclick="crackerClick()" id="meltedCheese" class="cracker rotate cheese" src="images\cheeseSkin.png">
                 <img onclick="crackerClick()" id="jam" class="cracker rotate jam" src="images\jamSkin.png">
                 <img onclick="crackerClick()" id="bacon" class="cracker rotate cheese" src="images\jamSkin.png">
@@ -374,6 +389,10 @@
                                 <br> <center><a id="crackersAllTimePortrait" class="infoPanelText">0</a></center>
                                 <br>
                                 <br>
+                                <center><a class="infoPanelText">Crackers Spent:</a></center>
+                                <br> <center><a id="spentCrackersPortrait" class="infoPanelText">0</a></center>
+                                <br>
+                                <br>
                                 <center><a class="infoPanelText">Upgrades Owned:</a></center>
                                 <br> <center><a id="upgradesOwnedPortrait" class="infoPanelText">0</a></center>
                                 <br>
@@ -402,6 +421,9 @@
                                 Crackers All Time: <a id="crackersAllTimeLandscape">0</a>
                                 <br>
                                 <br>
+                                Crackers Spent: <a id="spentCrackersLandscape">0</a>
+                                <br>
+                                <br>
                                 Upgrades Owned: <a id="upgradesOwnedLandscape">0</a>
                                 <br>
                                 <br>
@@ -414,7 +436,7 @@
                                 Window Zoom: <a id="zoomLandscape">0</a>
                                 <br>
                                 <br>
-                                Version: ALPHA 2.0
+                                Version: ALPHA 5.0
                             </p>
                         </div>
                         

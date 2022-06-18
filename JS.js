@@ -50,6 +50,8 @@ var zoom = "normal"
 
 var references = true
 
+var ADMIN = false
+
 // school zoom :P
 function schoolZoomToggle() {
     if (zoom === "normal") {
@@ -86,6 +88,7 @@ function statsRefresh() {
     //portrait VAR's
     document.getElementById("crackersInBankPortrait").innerHTML = crackers
     document.getElementById("crackersAllTimePortrait").innerHTML = totalCrackers
+    document.getElementById("spentCrackersPortrait").innerHTML = totalCrackers - crackers
     document.getElementById("upgradesOwnedPortrait").innerHTML = ownedBuildings
     document.getElementById("crackersPerClickPortrait").innerHTML = crackersPerClick
     document.getElementById("totalClicksPortrait").innerHTML = totalCrackerClicks
@@ -94,6 +97,7 @@ function statsRefresh() {
     // landscape VAR's
     document.getElementById("crackersInBankLandscape").innerHTML = crackers
     document.getElementById("crackersAllTimeLandscape").innerHTML = totalCrackers
+    document.getElementById("spentCrackersLandscape").innerHTML = totalCrackers - crackers
     document.getElementById("upgradesOwnedLandscape").innerHTML = ownedBuildings
     document.getElementById("crackersPerClickLandscape").innerHTML = crackersPerClick
     document.getElementById("totalClicksLandscape").innerHTML = totalCrackerClicks
@@ -119,17 +123,17 @@ function refresh() {
 
     if (references === true) {
         if (crackers > 1000 & crackers < 1050) {
-        document.getElementById("crackerCounter").innerHTML = "Thanks Sam, " + crackers
-        document.getElementById("crackerCounterText").innerHTML = ""
-    }
-    if (crackers > 1500 & crackers < 1550) {
-        document.getElementById("crackerCounter").innerHTML = "00111010 00101001"
-        document.getElementById("crackerCounterText").innerHTML = ""
-    }
-    if (crackers === 69) {
-        document.getElementById("crackerCounter").innerHTML = ":P"
-        document.getElementById("crackerCounterText").innerHTML = ""
-    }
+            document.getElementById("crackerCounter").innerHTML = "Thanks Sam, " + crackers
+            document.getElementById("crackerCounterText").innerHTML = ""
+        }
+        if (crackers > 1500 & crackers < 1550) {
+            document.getElementById("crackerCounter").innerHTML = "00111010 00101001"
+            document.getElementById("crackerCounterText").innerHTML = ""
+        }
+        if (crackers === 69) {
+            document.getElementById("crackerCounter").innerHTML = ":P"
+            document.getElementById("crackerCounterText").innerHTML = ""
+        }
     }
     
 }
@@ -526,59 +530,10 @@ function skinsButtonTwoOnclick() {
     
 }
 
-function skinsButtonOneOnclick() {
-    if (isMeltedCheese === false) {
-       if (crackers >= 100000000) {
-        crackers -= 100000000
-        document.getElementById("skinsOne").style.color = "green"
-        isMeltedCheese = true
-
-        document.getElementById("jam").style.display = "none"
-        isJamOn = false
-        document.getElementById("bacon").style.display = "none"
-        isBaconOn = false
-        document.getElementById("goldenCracker").style.display = "none"
-        isGoldenCrackerOn = false
-
-        isMeltedCheeseOn = true
-        document.getElementById("meltedCheese").style.display = "block"
-
-        refresh()
-    } 
-    }
-    else {
-        if (isMeltedCheeseOn === false) {
-            isMeltedCheeseOn = true
-            document.getElementById("meltedCheese").style.display = "block"
-            isMeltedCheeseOn = true
-
-            document.getElementById("jam").style.display = "none"
-            isJamOn = false
-            document.getElementById("bacon").style.display = "none"
-            isBaconOn = false
-            document.getElementById("goldenCracker").style.display = "none"
-            isGoldenCrackerOn = false
-
-            refresh()
-        }
-        else {
-            isMeltedCheeseOn = false
-            document.getElementById("meltedCheese").style.display = "none"
-
-            
-
-            refresh()
-        }
-    }
-    
-}
-
-function skinsButtonTwoOnclick() {
-    if (isJam === false) {
-       if (crackers >= 5000000000000) {
-        crackers -= 5000000000000
-        document.getElementById("skinsTwo").style.color = "green"
-        isJam = true
+function skinsButtonFiveOnclick() {
+       if (ADMIN === true) {
+        document.getElementById("skinsFive").style.color = "green"
+        document.getElementById("skinsButtonFivePrice").innerHTML = "✔️"
 
         document.getElementById("meltedCheese").style.display = "none"
         isMeltedCheeseOn = false
@@ -586,34 +541,17 @@ function skinsButtonTwoOnclick() {
         isBaconOn = false
         document.getElementById("goldenCracker").style.display = "none"
         isGoldenCrackerOn = false
-        
-        isJamOn = true
-        document.getElementById("jam").style.display = "block"
+        document.getElementById("jam").style.display = "none"
+        isGoldenCrackerOn = false
+
+        document.getElementById("cracker").src = "images/Puuuur fect cracker.png"
 
         refresh()
-    } 
     }
     else {
-        if (isJamOn === false) {
-            isJamOn = true
-            document.getElementById("jam").style.display = "block"
-
-            document.getElementById("meltedCheese").style.display = "none"
-            isMeltedCheeseOn = false
-            document.getElementById("bacon").style.display = "none"
-            isBaconOn = false
-            document.getElementById("goldenCracker").style.display = "none"
-            isGoldenCrackerOn = false
-
-            refresh()
-        }
-        else {
-            isJamOn = false
-            document.getElementById("jam").style.display = "none"
-            refresh()
-        }
+        document.getElementById("skinsFive").style.color = "red"
+        document.getElementById("skinsButtonFivePrice").innerHTML = "❌"
     }
-    
 }
 
 // screen open and close onclick{}

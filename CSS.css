@@ -170,6 +170,12 @@ body {
     font-size: 30px;
 }
 
+#skinsButtonPriceFive{
+    position: relative;
+    color: rgb(235, 169, 14);
+    font-size: 25px;
+}
+
 /* MIDDLE BOX */
 
 .middleBoxOuter {
@@ -249,8 +255,6 @@ body {
     display: none;
 }
 }
-
-
 
 /* Cracker Counter Text */
 
