@@ -1,4 +1,4 @@
-var crackers = 0
+var crackers = 1990
 var totalCrackers = 0
 var crackersPerClick = 1
 var totalCrackerClicks = 0
@@ -132,6 +132,10 @@ function refresh() {
         }
         if (crackers === 69) {
             document.getElementById("crackerCounter").innerHTML = ":P"
+            document.getElementById("crackerCounterText").innerHTML = ""
+        }
+        if (crackers > 1999 & crackers < 2021) {
+            document.getElementById("crackerCounter").innerHTML = "CHICKY TENDER FOREVER"
             document.getElementById("crackerCounterText").innerHTML = ""
         }
     }
