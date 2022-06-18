@@ -81,14 +81,14 @@ body {
     font-family: Fascinate
 }
 
-#upgradeButtonPriceOne {
+#upgradeButtonPriceOne, #upgradeButtonPriceTwo, #upgradeButtonPriceThree, #upgradeButtonPriceFour, #upgradeButtonPriceFive, #upgradeButtonPriceSix, #upgradeButtonPriceSeven, #upgradeButtonPriceEight, #upgradeButtonPriceNine, #upgradeButtonPriceTen {
     position: relative;
     color: red;
     font-size: 20px;
 }
 
 @media screen and (orientation: landscape) {
-    #upgradeButtonOneImg {
+    #upgradeButtonOneImg, #upgradeButtonTwoImg, #upgradeButtonThreeImg, #upgradeButtonFourImg, #upgradeButtonFiveImg, #upgradeButtonSixImg, #upgradeButtonSevenImg, #upgradeButtonEightImg, #upgradeButtonNineImg, #upgradeButtonTenImg {
         position: absolute;
         width: 30%;
         top: 50%;
@@ -97,7 +97,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-    #upgradeButtonOneImg {
+    #upgradeButtonOneImg, #upgradeButtonTwoImg, #upgradeButtonThreeImg, #upgradeButtonFourImg, #upgradeButtonFiveImg, #upgradeButtonSixImg, #upgradeButtonSevenImg, #upgradeButtonEightImg, #upgradeButtonNineImg, #upgradeButtonTenImg {
         position: absolute;
         width: 30%;
         top: 50%;
@@ -164,7 +164,7 @@ body {
     font-family: Fascinate
 }
 
-#skinsButtonPriceOne {
+#skinsButtonPriceOne{
     position: relative;
     color: rgb(235, 169, 14);
     font-size: 30px;
@@ -225,6 +225,33 @@ body {
     border-radius: 1vh
 }
 
+
+.cheese {
+    position: absolute;
+    left: 25%;
+    display: none;
+}
+
+@media screen and (orientation: landscape) {
+    .jam {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    display: none;
+}
+}
+
+@media screen and (orientation: portrait) {
+    .jam {
+    position: absolute;
+    left: 25%;
+    top: 22%;
+    display: none;
+}
+}
+
+
+
 /* Cracker Counter Text */
 
 #crackerCounter, #crackerCounterText{
@@ -256,6 +283,41 @@ body {
     top: auto;
     bottom: 0;
 }
+
+@media screen and (orientation: portrait) {
+.middleBottomBottomMiddle {
+    height: 25%;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgb(77, 255, 0);
+    color:rgb(255, 255, 255);
+    position: absolute;
+    cursor: pointer;
+    font-size: 25px;
+    top: auto;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+}
+
+@media screen and (orientation: landscape) {
+    .middleBottomBottomMiddle {
+        height: 25%;
+        width: 25%;
+        border-radius: 15px;
+        background-color: rgb(77, 255, 0);
+        color:rgb(255, 255, 255);
+        position: absolute;
+        cursor: pointer;
+        font-size: 25px;
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    }
+
 .middleBottomBottomRight {
     top: auto;
     bottom: 0;
@@ -297,7 +359,7 @@ body {
 
 /* INFO */
 
-#infoBoxOuter {
+#infoBoxOuter{
     position: relative;
     height: 100%;
     width: 100%;
@@ -308,7 +370,6 @@ body {
     text-align:justify;
     display: none
 }
-
 .infoHeader {
     position: relative;
     font-size: 30px;
@@ -349,6 +410,52 @@ body {
     font-size: 20px;
 }
 
+/* stats */
+
+#statsBoxOuter {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: left;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 20px;
+    overflow: auto;
+    text-align:justify;
+    display: none
+}
+
+@media screen and (orientation: landscape) {
+.statsPanelLandscape {
+    position: relative;
+    width: 85%;
+    height: 94%;
+    background-color: white;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block
+}
+.statsPanelPortrait {
+    display: none
+}
+}
+
+@media screen and (orientation: portrait) {
+    .statsPanelLandscape {
+        display: none
+    }
+    .statsPanelPortrait {
+        position: relative;
+        width: 85%;
+        height: 94%;
+        background-color: white;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        display: block
+    }
+    }
+
 
 /* add-on classes */
 
@@ -367,15 +474,4 @@ body {
 
 .clickable {
     cursor: pointer;
-}
-
-.absolute {
-    position: relative
-}
-
-.cheese {
-    top: -35%;
-    height: 40%;
-    width: 40%;
-    display: none
 }
