@@ -265,7 +265,7 @@ body {
 
 /* BOTTOM BUTTONS */
 
-.middleBottomTopLeft, .middleBottomTopRight, .middleBottomBottomLeft, .middleBottomBottomRight {
+.middleBottomTopLeft, .middleBottomTopRight, .middleBottomBottomLeft, .middleBottomBottomRight, .middleBottomBottomMiddle, .middleBottomTopMiddle {
     height: 35%;
     width: 25%;
     border-radius: 15px;
@@ -279,45 +279,20 @@ body {
     left: auto;
     right: 0;
 }
+.middleBottomTopMiddle {
+    left: 48%;
+    transform: translate(-50%);
+}
 .middleBottomBottomLeft {
     top: auto;
     bottom: 0;
 }
-
-@media screen and (orientation: portrait) {
 .middleBottomBottomMiddle {
-    height: 25%;
-    width: 25%;
-    border-radius: 15px;
-    background-color: rgb(77, 255, 0);
-    color:rgb(255, 255, 255);
-    position: absolute;
-    cursor: pointer;
-    font-size: 25px;
     top: auto;
-    bottom: 5%;
-    left: 50%;
+    bottom: 0;
+    left: 48%;
     transform: translate(-50%);
 }
-}
-
-@media screen and (orientation: landscape) {
-    .middleBottomBottomMiddle {
-        height: 25%;
-        width: 25%;
-        border-radius: 15px;
-        background-color: rgb(77, 255, 0);
-        color:rgb(255, 255, 255);
-        position: absolute;
-        cursor: pointer;
-        font-size: 25px;
-        top: auto;
-        bottom: 10%;
-        left: 50%;
-        transform: translate(-50%);
-    }
-    }
-
 .middleBottomBottomRight {
     top: auto;
     bottom: 0;

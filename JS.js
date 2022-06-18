@@ -48,6 +48,8 @@ var isGoldenCrackerOn = false
 
 var zoom = "normal"
 
+var references = true
+
 // school zoom :P
 function schoolZoomToggle() {
     if (zoom === "normal") {
@@ -60,6 +62,22 @@ function schoolZoomToggle() {
         document.getElementById("zoomText").innerHTML = "Small Moniter"
         zoom = "normal"
     }
+    refresh()
+}
+
+// references (i had to search up how to spell that :P )
+function referencesToggle() {
+    if (references === true) {
+        references = false
+        document.getElementById("referencesText").innerHTML = "References Off"
+        document.getElementById("referencesText").style.color = "red"
+    }
+    else {
+        references = true
+        document.getElementById("referencesText").innerHTML = "References On"
+        document.getElementById("referencesText").style.color = "green"
+    }
+    refresh()
 }
 
 // Refresh Screen Variables
@@ -71,6 +89,7 @@ function statsRefresh() {
     document.getElementById("upgradesOwnedPortrait").innerHTML = ownedBuildings
     document.getElementById("crackersPerClickPortrait").innerHTML = crackersPerClick
     document.getElementById("totalClicksPortrait").innerHTML = totalCrackerClicks
+    document.getElementById("zoomPortrait").innerHTML = document.body.style.zoom
 
     // landscape VAR's
     document.getElementById("crackersInBankLandscape").innerHTML = crackers
@@ -78,10 +97,12 @@ function statsRefresh() {
     document.getElementById("upgradesOwnedLandscape").innerHTML = ownedBuildings
     document.getElementById("crackersPerClickLandscape").innerHTML = crackersPerClick
     document.getElementById("totalClicksLandscape").innerHTML = totalCrackerClicks
+    document.getElementById("zoomLandscape").innerHTML = document.body.style.zoom
 }
 
 function refresh() {
     document.getElementById("crackerCounter").innerHTML = crackers
+    document.getElementById("crackerCounterText").innerHTML = " Crackers"
 
     upgradeOnePriceCheck()
     upgradeTwoPriceCheck()
@@ -95,6 +116,22 @@ function refresh() {
     upgradeTenPriceCheck()
 
     statsRefresh()
+
+    if (references === true) {
+        if (crackers > 1000 & crackers < 1050) {
+        document.getElementById("crackerCounter").innerHTML = "Thanks Sam, " + crackers
+        document.getElementById("crackerCounterText").innerHTML = ""
+    }
+    if (crackers > 1500 & crackers < 1550) {
+        document.getElementById("crackerCounter").innerHTML = "00111010 00101001"
+        document.getElementById("crackerCounterText").innerHTML = ""
+    }
+    if (crackers === 69) {
+        document.getElementById("crackerCounter").innerHTML = ":P"
+        document.getElementById("crackerCounterText").innerHTML = ""
+    }
+    }
+    
 }
 
 // cracker click 
