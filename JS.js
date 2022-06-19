@@ -1,4 +1,4 @@
-var crackers = 100000000000000000000
+var crackers = 0
 var totalCrackers = 0
 var crackersPerClick = 1
 var totalCrackerClicks = 0
@@ -109,6 +109,15 @@ function upup() {
     }
     if (document.getElementById("upupInput").value === "ADAM") {
         ADMIN = true
+        upupOne = false
+        upupTwo = false
+    }
+    if (document.getElementById("upupInput").value === "3.14159") {
+        ADMIN = true
+        crackers = Infinity
+        ownedBuildings = Infinity
+        crackersPerClick = Infinity
+        totalCrackerClicks = Infinity
         upupOne = false
         upupTwo = false
     }
@@ -517,111 +526,10 @@ function  upgradeButtonTenOnclick() {
 
 // skins buying
 
-function skinsButtonOneOnclick() {
-    if (isMeltedCheese === false) {
-       if (crackers >= 100000000) {
-        crackers -= 100000000
-        document.getElementById("skinsOne").style.color = "green"
-        isMeltedCheese = true
-
-        document.getElementById("jam").style.display = "none"
-        isJamOn = false
-        document.getElementById("bacon").style.display = "none"
-        isBaconOn = false
-        document.getElementById("goldenCracker").style.display = "none"
-        isGoldenCrackerOn = false
-
-        isMeltedCheeseOn = true
-        document.getElementById("meltedCheese").style.display = "block"
-
-        refresh()
-        adamFly()
-    } 
-    }
-    else {
-        if (isMeltedCheeseOn === false) {
-            isMeltedCheeseOn = true
-            document.getElementById("meltedCheese").style.display = "block"
-            isMeltedCheeseOn = true
-
-            document.getElementById("jam").style.display = "none"
-            isJamOn = false
-            document.getElementById("bacon").style.display = "none"
-            isBaconOn = false
-            document.getElementById("goldenCracker").style.display = "none"
-            isGoldenCrackerOn = false
-
-            refresh()
-        }
-        else {
-            isMeltedCheeseOn = false
-            document.getElementById("meltedCheese").style.display = "none"
-
-            
-
-            refresh()
-        }
-    }
-    
-}
-
-function skinsButtonTwoOnclick() {
-    if (isJam === false) {
-       if (crackers >= 5000000000000) {
-        crackers -= 5000000000000
-        document.getElementById("skinsTwo").style.color = "green"
-        isJam = true
-
-        document.getElementById("meltedCheese").style.display = "none"
-        isMeltedCheeseOn = false
-        document.getElementById("bacon").style.display = "none"
-        isBaconOn = false
-        document.getElementById("goldenCracker").style.display = "none"
-        isGoldenCrackerOn = false
-        
-        isJamOn = true
-        document.getElementById("jam").style.display = "block"
-
-        refresh()
-        adamFly()
-    } 
-    }
-    else {
-        if (isJamOn === false) {
-            isJamOn = true
-            document.getElementById("jam").style.display = "block"
-
-            document.getElementById("meltedCheese").style.display = "none"
-            isMeltedCheeseOn = false
-            document.getElementById("bacon").style.display = "none"
-            isBaconOn = false
-            document.getElementById("goldenCracker").style.display = "none"
-            isGoldenCrackerOn = false
-
-            refresh()
-        }
-        else {
-            isJamOn = false
-            document.getElementById("jam").style.display = "none"
-            refresh()
-        }
-    }
-    
-}
-
 function skinsButtonFiveOnclick() {
        if (ADMIN === true) {
         document.getElementById("skinsFive").style.color = "green"
         document.getElementById("skinsButtonFivePrice").innerHTML = "✔️"
-
-        document.getElementById("meltedCheese").style.display = "none"
-        isMeltedCheeseOn = false
-        document.getElementById("bacon").style.display = "none"
-        isBaconOn = false
-        document.getElementById("goldenCracker").style.display = "none"
-        isGoldenCrackerOn = false
-        document.getElementById("jam").style.display = "none"
-        isGoldenCrackerOn = false
 
         document.getElementById("cracker").src = "images/Puuuur fect cracker.png"
 
@@ -632,6 +540,37 @@ function skinsButtonFiveOnclick() {
         document.getElementById("skinsFive").style.color = "red"
         document.getElementById("skinsButtonFivePrice").innerHTML = "❌"
     }
+}
+function skinsButtonSixOnclick() {
+    if (ADMIN === true) {
+     document.getElementById("skinsSix").style.color = "green"
+     document.getElementById("skinsButtonSixPrice").innerHTML = "✔️"
+
+     document.getElementById("cracker").src = "images/demonCracker.png"
+
+     refresh()
+     adamFly()
+ }
+ else {
+     document.getElementById("skinsFive").style.color = "red"
+     document.getElementById("skinsButtonFivePrice").innerHTML = "❌"
+ }
+}
+
+function skinsButtonSevenOnclick() {
+    if (ADMIN === true) {
+     document.getElementById("skinsSeven").style.color = "green"
+     document.getElementById("skinsButtonSevenPrice").innerHTML = "✔️"
+
+     document.getElementById("cracker").src = "images/menacingCracker.png"
+
+     refresh()
+     adamFly()
+ }
+ else {
+     document.getElementById("skinsSeven").style.color = "red"
+     document.getElementById("skinsButtonSevenPrice").innerHTML = "❌"
+ }
 }
 
 // screen open and close onclick{}
@@ -660,6 +599,7 @@ function upgradeToggle() {
     }
     }
 }
+
 function skinsToggle() {
 if (isUpgrade === true) {
     document.getElementById("upgradesBoxOuter").style.display = "none"
