@@ -10,7 +10,9 @@
     </head>
     <body>
         <!-- HTML: -->
-
+    <div class="fullScreen">
+        <img id="adamCrackerFly" src="images\Puuuur fect cracker.png">
+    </div>
         <!-- Left Box -->
         <div class="leftBoxOuter">
             <div id="upgradesBoxOuter">
@@ -89,7 +91,7 @@
                         <br>
                         <tr>
                             <div id="upgradeButton" class="clickable" onclick='upgradeButtonFiveOnclick()'>
-                                <img src="images\blackCheese.png" id="upgradeButtonFiveImg">
+                                <img src="images\blackChair.png" id="upgradeButtonFiveImg">
                                 <div class="upgradeButtonQuestionMark">
                                     <center>
                                         <b id="UpgradeButtonFiveName">???</b>
@@ -411,6 +413,9 @@
                                 <br>
                                 <center><a class="infoPanelText">Version:</a></center>
                                 <br> <center><a class="infoPanelTextPortrait">ALPHA 2.0</center>
+                                <br>
+                                <br>
+                                <br> <div class="clickable"><center><a id="zoomPortrait" class="infoPanelText">🔒</a></center></div>
                             </p>
                         </div>
                         <div class="statsPanelLandscape">
@@ -437,11 +442,18 @@
                                 <br>
                                 <br>
                                 Version: ALPHA 6.0
+                                <br>
+                                <br>
+                                <div class="clickable" onclick="upup()"><center>🔒</center></div>
+                                <div class="clickable"><center><input id="upupInput"></center></div>
                             </p>
                         </div>
-                        
                     <div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- full body tag to make flying adam go across the screen -->
     </body>
 </html>

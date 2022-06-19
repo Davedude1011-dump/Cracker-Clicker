@@ -1,4 +1,4 @@
-var crackers = 1990
+var crackers = 100000000000000000000
 var totalCrackers = 0
 var crackersPerClick = 1
 var totalCrackerClicks = 0
@@ -7,6 +7,12 @@ var isCheese = false
 var isJamUpg = false
 var isBaconUpg = false
 var isMicrowave = false
+var isChair = false
+var isChocolate = false
+var isChips = false
+var isKetchup = false
+var isMustard = false
+var isMayo = false
 
 var isUpgrade = false
 var isInfo = false
@@ -51,6 +57,63 @@ var zoom = "normal"
 var references = true
 
 var ADMIN = false
+var upupOne = false
+var upupTwo = true
+
+var inFlight = false
+
+// adam fly animation 
+
+function adamFly() {
+    if (references === true) {
+        if (inFlight === false) {
+            inFlight = true
+            document.getElementById("adamCrackerFly").style.display = "block";
+            document.getElementById("adamCrackerFly").style.animation = "adamCrackerFlyAnimation 10s linear";
+            setTimeout(() => {  document.getElementById("adamCrackerFly").style.display = "none"; }, 10000);
+            setTimeout(() => {  inFlight = false; }, 10000);
+    }
+    else {
+
+    }
+    }
+    else {
+
+    }
+}
+
+// secret code to get ADMIN and the Puuuur fect cat
+function upup() {
+    if (crackers === 31) {
+        upupOne = true
+        crackers = 0
+    }
+    if (upupOne === true) {
+        if (crackers === 41) {
+            upupTwo = true
+            crackers = 0
+        }
+    }
+    if (upupOne === true) {
+        if (upupOne = true) {
+            if (crackers === 59) {
+                ADMIN = true
+                crackers = Infinity
+                ownedBuildings = Infinity
+                crackersPerClick = Infinity
+                totalCrackerClicks = Infinity
+                upupOne = false
+                upupTwo = false
+            }
+        }
+    }
+    if (document.getElementById("upupInput").value === "ADAM") {
+        ADMIN = true
+        upupOne = false
+        upupTwo = false
+    }
+    refresh()
+}
 
 // school zoom :P
 function schoolZoomToggle() {
@@ -232,15 +295,15 @@ function upgradeFivePriceCheck() {
     //upgrade 5
     if (crackers >= upgradeFivePrice) {
         document.getElementById("upgradeButtonPriceFive").style.color = "green"
-        isCheese = true
+        isChair = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceFive").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonFiveImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonFiveName").innerHTML = "Cheese"
+    if (isChair === true) {
+        document.getElementById("upgradeButtonFiveImg").src = "images/chair.png"
+        document.getElementById("UpgradeButtonFiveName").innerHTML = "Chair?"
         
     }
     document.getElementById("upgradeButtonFivePrice").innerHTML = upgradeFivePrice
@@ -252,15 +315,15 @@ function upgradeSixPriceCheck() {
     //upgrade 6
     if (crackers >= upgradeSixPrice) {
         document.getElementById("upgradeButtonPriceSix").style.color = "green"
-        isCheese = true
+        isChocolate = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceSix").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonSixImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonSixName").innerHTML = "Cheese"
+    if (isChocolate === true) {
+        document.getElementById("upgradeButtonSixImg").src = "images/chocolate.png"
+        document.getElementById("UpgradeButtonSixName").innerHTML = "chocolate"
         
     }
     document.getElementById("upgradeButtonSixPrice").innerHTML = upgradeSixPrice
@@ -272,15 +335,15 @@ function upgradeSevenPriceCheck() {
     //upgrade 7
     if (crackers >= upgradeSevenPrice) {
         document.getElementById("upgradeButtonPriceSeven").style.color = "green"
-        isCheese = true
+        isChips = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceSeven").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonSevenImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonSevenName").innerHTML = "Cheese"
+    if (isChips === true) {
+        document.getElementById("upgradeButtonSevenImg").src = "images/chips.png"
+        document.getElementById("UpgradeButtonSevenName").innerHTML = "chips"
         
     }
     document.getElementById("upgradeButtonSevenPrice").innerHTML = upgradeSevenPrice
@@ -292,15 +355,15 @@ function upgradeEightPriceCheck() {
     //upgrade 8
     if (crackers >= upgradeEightPrice) {
         document.getElementById("upgradeButtonPriceEight").style.color = "green"
-        isCheese = true
+        isKetchup = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceEight").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonEightImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonEightName").innerHTML = "Cheese"
+    if (isKetchup === true) {
+        document.getElementById("upgradeButtonEightImg").src = "images/ketchup.png"
+        document.getElementById("UpgradeButtonEightName").innerHTML = "Ketchup"
         
     }
     document.getElementById("upgradeButtonEightPrice").innerHTML = upgradeEightPrice
@@ -312,15 +375,15 @@ function upgradeNinePriceCheck() {
     //upgrade 9
     if (crackers >= upgradeNinePrice) {
         document.getElementById("upgradeButtonPriceNine").style.color = "green"
-        isCheese = true
+        isMustard = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceNine").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonNineImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonNineName").innerHTML = "Cheese"
+    if (isMustard === true) {
+        document.getElementById("upgradeButtonNineImg").src = "images/mustard.png"
+        document.getElementById("UpgradeButtonNineName").innerHTML = "Mustard"
         
     }
     document.getElementById("upgradeButtonNinePrice").innerHTML = upgradeNinePrice
@@ -332,15 +395,15 @@ function upgradeTenPriceCheck() {
     //upgrade 10
     if (crackers >= upgradeTenPrice) {
         document.getElementById("upgradeButtonPriceTen").style.color = "green"
-        isCheese = true
+        isMayo = true
         
     }
     else {
         document.getElementById("upgradeButtonPriceTen").style.color = "red"
     }
-    if (isCheese === true) {
-        document.getElementById("upgradeButtonTenImg").src = "images/cheese.png"
-        document.getElementById("UpgradeButtonTenName").innerHTML = "Cheese"
+    if (isMayo === true) {
+        document.getElementById("upgradeButtonTenImg").src = "images/mayo.png"
+        document.getElementById("UpgradeButtonTenName").innerHTML = "Mayo"
         
     }
     document.getElementById("upgradeButtonTenPrice").innerHTML = upgradeTenPrice
@@ -357,6 +420,7 @@ function  upgradeButtonOneOnclick() {
         crackersPerClick += upgradeOneAdd
         upgradeOnePrice += parseInt(upgradeOnePrice * 0.2)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -366,6 +430,7 @@ function  upgradeButtonTwoOnclick() {
         crackersPerClick += upgradeTwoAdd
         upgradeTwoPrice += parseInt(upgradeTwoPrice * 0.2)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -375,6 +440,7 @@ function  upgradeButtonThreeOnclick() {
         crackersPerClick += upgradeThreeAdd
         upgradeThreePrice += parseInt(upgradeThreePrice * 0.2)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -384,6 +450,7 @@ function  upgradeButtonFourOnclick() {
         crackersPerClick += upgradeFourAdd
         upgradeFourPrice += parseInt(upgradeFourPrice * 0.3)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -393,6 +460,7 @@ function  upgradeButtonFiveOnclick() {
         crackersPerClick += upgradeFiveAdd
         upgradeFivePrice += parseInt(upgradeFivePrice * 0.3)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -402,6 +470,7 @@ function  upgradeButtonSixOnclick() {
         crackersPerClick += upgradeSixAdd
         upgradeSixPrice += parseInt(upgradeSixPrice * 0.3)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -411,6 +480,7 @@ function  upgradeButtonSevenOnclick() {
         crackersPerClick += upgradeSevenAdd
         upgradeSevenPrice += parseInt(upgradeSevenPrice * 0.4)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -420,6 +490,7 @@ function  upgradeButtonEightOnclick() {
         crackersPerClick += upgradeEightAdd
         upgradeEightPrice += parseInt(upgradeEightPrice * 0.4)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -429,6 +500,7 @@ function  upgradeButtonNineOnclick() {
         crackersPerClick += upgradeNineAdd
         upgradeNinePrice += parseInt(upgradeNinePrice * 0.4)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -438,6 +510,7 @@ function  upgradeButtonTenOnclick() {
         crackersPerClick += upgradeTenAdd
         upgradeTenPrice += parseInt(upgradeTenPrice * 0.5)
         ownedBuildings += 1
+        adamFly()
     }
     refresh()
 }
@@ -462,6 +535,7 @@ function skinsButtonOneOnclick() {
         document.getElementById("meltedCheese").style.display = "block"
 
         refresh()
+        adamFly()
     } 
     }
     else {
@@ -509,6 +583,7 @@ function skinsButtonTwoOnclick() {
         document.getElementById("jam").style.display = "block"
 
         refresh()
+        adamFly()
     } 
     }
     else {
@@ -551,6 +626,7 @@ function skinsButtonFiveOnclick() {
         document.getElementById("cracker").src = "images/Puuuur fect cracker.png"
 
         refresh()
+        adamFly()
     }
     else {
         document.getElementById("skinsFive").style.color = "red"
