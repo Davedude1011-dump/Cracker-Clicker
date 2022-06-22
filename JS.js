@@ -552,8 +552,8 @@ function skinsButtonSixOnclick() {
      adamFly()
  }
  else {
-     document.getElementById("skinsFive").style.color = "red"
-     document.getElementById("skinsButtonFivePrice").innerHTML = "❌"
+     document.getElementById("skinsSix").style.color = "red"
+     document.getElementById("skinsButtonSixPrice").innerHTML = "❌"
  }
 }
 
